@@ -5,12 +5,9 @@ class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         vector <int> result;
-        int size1 = nums1.size(), size2 = nums2.size();
         int i=0, j=0;
 
-        while(i<size1 && j<size2){
-          while(nums1[i]==0) i++;
-          while(nums2[j]==0) j++;
+        while(i<m && j<n){
 
           if(nums1[i]<=nums2[j]){
             result.push_back(nums1[i]);
@@ -20,35 +17,34 @@ public:
             result.push_back(nums2[j]);
             j++;
           }
+
         }
 
-        if(i==size1-1){
-          while(j<size2){
-            while(nums2[j]==0) j++;
+        if(i==m){
+          while(j<n){
             result.push_back(nums2[j]);
             j++;
           }
         }
 
-        if(j==size2-1){
-          while(nums1[i]==0) i++;
-          result.push_back(nums1[i]);
-          i++;
+        if(j==n){
+          while(i<m){
+            result.push_back(nums1[i]);
+            i++;
+          }
         }
         
-        int size3 = result.size();
-        for(int i=0;i<size3-1;i++){
-          nums1[i] = result[i]; 
-        }
+        nums1.clear();
+        nums1 = result;
     }
 };
 
 int main() {
-  vector<int> nums1 = {1,2,3,0,0,0};
-  vector<int> nums2 = {2,5,6};
+  vector<int> nums1 = {1};
+  vector<int> nums2 = {};
 
-  int m = 3;
-  int n = 3;
+  int m = 1;
+  int n = 0;
 
   Solution obj;
 
