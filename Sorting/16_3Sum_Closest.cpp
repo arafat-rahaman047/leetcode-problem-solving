@@ -2,25 +2,18 @@
 using namespace std;
 
 class Solution {
-public:
-    int threeSumCloset(vector<int>& nums, int target) {
-        
-    }
+  public:
+      int threeSumCloset(vector<int>& nums, int target) {
+          
+      }
 };
 
 int main() {
-  vector<int> nums = {0,0,0};
+  vector<int> nums = {-1,2,1,-4};
+  int target = 1;
 
   Solution obj;
 
-  vector<vector<int>> ans = obj.threeSum(nums);
-  
-  for(auto v : ans){
-    cout<<"[ ";
-    for(auto x: v){
-        cout<<x<<" ";
-    }
-    cout<<"]\n";
-  }
+  cout<<obj.threeSumCloset(nums,target)<<endl;
   return 0;
 }
