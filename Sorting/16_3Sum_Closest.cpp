@@ -3,9 +3,13 @@ using namespace std;
 
 class Solution {
   public:
-      int threeSumCloset(vector<int>& nums, int target) {
+    int threeSumClosest(vector<int>& nums, int target) {
+        int min = INT_MAX;
+        for(int i=0;i<nums.size();i++){
           
-      }
+        }
+        return min;
+    }
 };
 
 int main() {
@@ -14,6 +18,6 @@ int main() {
 
   Solution obj;
 
-  cout<<obj.threeSumCloset(nums,target)<<endl;
+  cout<<obj.threeSumClosest(nums,target)<<endl;
   return 0;
 }
