@@ -1,0 +1,22 @@
+cat > .gitignore << EOF
+# Executable files
+*.exe
+*.EXE
+*.bin
+*.out
+
+# CPH (Competitive Programming Helper) files
+.cph/
+*.prob
+
+# VS Code settings
+.vscode/
+
+# Object files
+*.o
+*.obj
+
+# OS generated files
+.DS_Store
+Thumbs.db
+EOF
